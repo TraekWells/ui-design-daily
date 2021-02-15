@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table UI Design</title>
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="tools">
+        <div class="tools__filter">
+          <p>Show</p>
+          <select name="entries" id="entries">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          <p>entries</p>
+        </div>
+        <div class="tools__search">
+          <ion-icon name="search-outline"></ion-icon>
+          <input type="text" placeholder="Search" />
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>First Name <ion-icon name="chevron-up-outline"></ion-icon></th>
+            <th>Last Name <ion-icon name="chevron-up-outline"></ion-icon></th>
+            <th>Email <ion-icon name="chevron-up-outline"></ion-icon></th>
+            <th>Created At <ion-icon name="chevron-up-outline"></ion-icon></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Manuel</td>
+            <td>Sutton</td>
+            <td>manual.sutton@gmail.com</td>
+            <td>09/06/2020</td>
+          </tr>
+          <tr>
+            <td>Bill</td>
+            <td>Nye</td>
+            <td>bill.nye@yahoo.com</td>
+            <td>09/06/2020</td>
+          </tr>
+          <tr>
+            <td>Kobe</td>
+            <td>Bryant</td>
+            <td>kobe.bean@yahoo.com</td>
+            <td>09/06/2020</td>
+          </tr>
+          <tr>
+            <td>MF</td>
+            <td>DOOM</td>
+            <td>mf.doom@gmail.com</td>
+            <td>06/06/2020</td>
+          </tr>
+          <tr>
+            <td>Carl</td>
+            <td>Sagan</td>
+            <td>carl.sagan@yahool.com</td>
+            <td>06/06/2020</td>
+          </tr>
+          <tr>
+            <td>Will</td>
+            <td>Smith</td>
+            <td>will.smith@yahoo.com</td>
+            <td>06/06/2020</td>
+          </tr>
+          <tr>
+            <td>Genghis</td>
+            <td>Khan</td>
+            <td>the.real.genghis@gmail.com</td>
+            <td>06/06/2020</td>
+          </tr>
+          <tr>
+            <td>Musashi</td>
+            <td>Mayamoto</td>
+            <td>musashi@gmail.com</td>
+            <td>06/06/2020</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="actions">
+        <button class="button-primary" disabled>
+          <ion-icon name="chevron-back-outline"></ion-icon> Previous
+        </button>
+        <button class="button-primary">
+          Next <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+    </main>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  </body>
+</html>

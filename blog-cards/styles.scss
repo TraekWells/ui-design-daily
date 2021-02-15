@@ -1,0 +1,202 @@
+// https://uidesigndaily.com/posts/sketch-blog-cards-post-article-thumbnail-day-997
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
+
+:root {
+  --color-background: #f7f8fc;
+  --color-primary-dark-1: #10182f;
+  --color-primary-dark-2: #545d7a;
+  --color-secondary: #440049;
+  --color-teal: #47bcd4;
+  --color-purple: #5e76bf;
+  --color-pink: #cd5b9f;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  display: flex;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.cards {
+  display: flex;
+  max-width: 100rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3.4rem 3.6rem #e9ecf9;
+
+  &:not(:last-of-type) {
+    margin-right: 5rem;
+  }
+
+  &__image {
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      opacity: 0.35;
+      background: linear-gradient(
+        to right bottom,
+        var(--color-primary-dark-1),
+        var(--color-secondary)
+      );
+    }
+    img {
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex-basis: 55%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 27rem;
+
+    .card-title {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    .card-title + p {
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+
+    .tag {
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 0.1rem 0.6rem;
+      border-radius: 1.2rem;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+
+      align-self: flex-start;
+
+      &--teal {
+        background-color: var(--color-teal);
+      }
+
+      &--purple {
+        background-color: var(--color-purple);
+      }
+
+      &--pink {
+        background-color: var(--color-pink);
+      }
+    }
+  }
+  .author {
+    display: flex;
+    margin-top: auto;
+
+    &__image {
+      height: 4.4rem;
+      width: 4.4rem;
+      border-radius: 50%;
+      margin-right: 1rem;
+    }
+
+    &__details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .date {
+      color: var(--color-primary-dark-2);
+      font-size: 1.4rem;
+    }
+  }
+}

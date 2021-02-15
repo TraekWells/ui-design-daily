@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styles.min.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card__upper">
+        <h2>Respositories</h2>
+        <button class="button button--header">
+          <i data-feather="plus"></i>
+        </button>
+        <div class="card__search">
+          <input type="text" placeholder="Find a repository" />
+          <i data-feather="search"></i>
+        </div>
+        <ul class="card__list">
+          <li><i data-feather="lock"></i> TraekWells/project-one</li>
+          <li><i data-feather="lock"></i> TraekWells/project-two</li>
+          <li><i data-feather="lock"></i> TraekWells/project-three</li>
+          <li><i data-feather="lock"></i> TraekWells/project-four</li>
+        </ul>
+        <a href="#">Show more</a>
+      </div>
+
+      <div class="card__lower">
+        <button class="button">Create an organization</button>
+      </div>
+    </div>
+    <div class="graphic"></div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
