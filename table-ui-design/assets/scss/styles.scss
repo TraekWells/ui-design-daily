@@ -67,6 +67,7 @@ body {
 
   &__filter {
     display: flex;
+    align-items: center;
   }
 
   &__search {
@@ -105,11 +106,6 @@ body {
     border-radius: var(--border-radius);
     transition: 0.2s ease all;
 
-    &:hover {
-      box-shadow: 0 1rem 3rem rgba(93, 105, 141, 0.4);
-      z-index: 10;
-    }
-
     td {
       padding: 2rem;
     }
@@ -133,6 +129,11 @@ body {
     tr {
       background-color: var(--color-white);
       margin-bottom: 0.5rem;
+
+      &:hover {
+        box-shadow: 0 1rem 3rem rgba(93, 105, 141, 0.4);
+        z-index: 10;
+      }
     }
   }
 }
@@ -140,6 +141,15 @@ body {
 .actions {
   display: flex;
   justify-content: flex-end;
+}
+
+.button-primary {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary-400);
+  background-color: white;
 }
 
 .credits {
