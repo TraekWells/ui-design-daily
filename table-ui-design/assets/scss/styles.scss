@@ -31,6 +31,11 @@ body {
   padding: 0;
 }
 
+// I really had to create one.. and only one utility class. Smh.
+.ml-1 {
+  margin-left: 1rem;
+}
+
 .button {
   font-size: 1.2rem;
   display: flex;
